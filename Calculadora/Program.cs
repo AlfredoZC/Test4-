@@ -21,12 +21,12 @@ while(checker){
             Console.WriteLine("Vamos a calcular la Fuerza!");
             Console.WriteLine("Ingrese la masa:");
             double masa = double.Parse(Console.ReadLine());
-            Console.WriteLine("Ingres la aceleracion: ");
+            Console.WriteLine("Ingrese la aceleracion: ");
             double aceleracion = double.Parse(Console.ReadLine());  
             
             double resultF = Physics.fuerza(masa,aceleracion);
             Console.WriteLine($"El resultado es:{resultF}\n");
-            Console.WriteLine("Quieres calcular la fuerza nuevamente?");
+            Console.WriteLine("Quieres calcular la fuerza nuevamente?\n");
             Console.WriteLine("1.- SI           2.-NO");
             int checker1 = int.Parse(Console.ReadLine());
             if(checker1 == 1){
@@ -39,16 +39,16 @@ while(checker){
 
 
     }else if( result == 2){
-        
+
         bool iterador = true;
         while(iterador){
-            Console.WriteLine("Vamos a calcular la Fuerza!");
-            Console.WriteLine("Ingrese la masa:");
-            double masa = double.Parse(Console.ReadLine());
-            Console.WriteLine("Ingres la aceleracion: ");
-            double aceleracion = double.Parse(Console.ReadLine());  
+            Console.WriteLine("Vamos a calcular el trabajo!");
+            Console.WriteLine("Ingrese la fuerza:");
+            double fuerza = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingres la distancia: ");
+            double distancia = double.Parse(Console.ReadLine());  
             
-            double resultF = Physics.fuerza(masa,aceleracion);
+            double resultF = Physics.trabajo(fuerza,distancia);
             Console.WriteLine($"El resultado es:{resultF}\n");
             Console.WriteLine("Quieres calcular la fuerza nuevamente?");
             Console.WriteLine("1.- SI           2.-NO");
@@ -61,8 +61,26 @@ while(checker){
         }
 
     }else if ( result == 3){
-        double masa;
-        double velocidad ;
+
+        bool iterador = true;
+        while(iterador){
+            Console.WriteLine("Vamos a calcular el trabajo!");
+            Console.WriteLine("Ingrese la fuerza:");
+            double fuerza = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingres la distancia: ");
+            double distancia = double.Parse(Console.ReadLine());  
+            
+            double resultF = Physics.trabajo(fuerza,distancia);
+            Console.WriteLine($"El trabajo es:{resultF}\n");
+            Console.WriteLine("Quieres calcular el trabajo nuevamente?");
+            Console.WriteLine("1.- SI           2.-NO");
+            int checker1 = int.Parse(Console.ReadLine());
+            if(checker1 == 1){
+                continue;
+            }else{
+                iterador = false;
+            }
+        }
     }
    
 Console.WriteLine("Desea seguir usando la calculadora fisica?");
